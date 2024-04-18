@@ -1,13 +1,8 @@
-let a = +prompt("Введите коэффициент a");
-let b = +prompt("Введите коэффициент b");
-let c = +prompt("Введите коэффициент c");
-let d = (b ** 2) - (4 * a * c);
-if (d < 0) {
-    console.log("Корней нет");
-} else if (d == 0) {
-    console.log("Есть 1 корень");
-} else if (d > 0) {
-    console.log("Есть 2 корня");
-} else {
-    console.log("Ввод некорректен");
-}
+import { argv, stdout, stderr } from 'node:process';
+
+console.log('arg 1', argv[2]);
+console.log('arg 2', argv[3]);
+console.log('arg 3', argv[4]);
+
+stdout.write("Корни есть\n");
+stderr.write("Корней нет\n");
